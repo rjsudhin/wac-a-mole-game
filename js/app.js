@@ -8,6 +8,8 @@ let parentContainer = ''
 let defaultSize = 3
 
 loadingGameGrid(defaultSize) 
+let randomMole = document.createElement('img')
+
 
 const screenTimeDisplay = document.querySelector('.screen-time-display')
 const userScoreDisplay = document.querySelector('.user-score-display')
@@ -22,9 +24,9 @@ function loadingGameGrid(size) {
   const amountOfSize = size * size
   for (let i = 0; i < amountOfSize; i++) {
     let board = document.createElement('div')
-    let moleIcn = document.createElement('img')
+    // let moleIcn = document.createElement('img')
     board.classList.add('board')
-    board.appendChild(moleIcn)
+    // board.appendChild(moleIcn)
     gameGrid.appendChild(board)
   }
 }
@@ -43,14 +45,19 @@ function gameTriggering() {
 }
 
 
+
+
 function runningMole() {
   console.log('running .....')
   let allBoards = document.querySelectorAll('.board')
+  randomMole.src = ''
+
 
   let randomBoard = allBoards[Math.floor(Math.random() * allBoards.length)]
-  let randomMole = randomBoard.querySelector('img')
+  randomBoard.appendChild(randomMole)
+  randomMole.style.border = 'none'
   randomMole.classList.add('mole')
-  randomMole.alt = 'x'
+  // randomMole.alt = 'x'
   randomMole.src = '../icons/mole.png'
   console.log(randomBoard)
 }
