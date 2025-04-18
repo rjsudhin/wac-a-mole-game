@@ -3,6 +3,7 @@ const gameMaxTime = 20
 let gameScreenTime = gameMaxTime
 
 let timer = null
+let parentContainer = ''
 
 const screenTimeDisplay = document.querySelector('.screen-time-display')
 const userScoreDisplay = document.querySelector('.user-score-display')
@@ -13,7 +14,7 @@ const startGameBtn = document.querySelector('.start-game-btn')
 
 // game begins
 startGameBtn.addEventListener('click', (e)=> {
-  let parentContainer = e.target.parentElement
+  parentContainer = e.target.parentElement
   parentContainer.removeChild(e.target)
   gameTriggering()
 })
@@ -33,5 +34,14 @@ function timerRunning() {
     console.log('the game ends')
     // timer killing
     clearInterval(timer)
+
+    resetNextRoundGame()
   }
+}
+
+
+function resetNextRoundGame() {
+  parentContainer.appendChild(startGameBtn)
+  startGameBtn.textContent = 'Next Round'
+  startGameBtn.classList.add('next-round-btn')
 }
