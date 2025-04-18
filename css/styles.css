@@ -47,10 +47,7 @@ body {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    box-shadow: 1px 2px 3px #252525;
-    border-radius: 1em;
-    border-top-left-radius: 60px;
-    border-top-right-radius: 20px;
+    border-bottom: 6px solid black;
     /* mole moves here */
     display: grid;
     margin: 2rem 0;
