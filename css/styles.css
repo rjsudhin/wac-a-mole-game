@@ -19,3 +19,33 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+#app-container {
+  border: 1px solid black;
+  .section1, .section2, .section3 {
+    border: 1px solid black;
+    width: 300px;
+  }
+
+  .section1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .section2#game-grid{
+    height: 300px;
+    /* mole moves here */
+    display: grid;
+  }
+
+  .section1, .section3 {
+    height: 60px;
+  }
+
+  .section3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
