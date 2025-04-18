@@ -3,7 +3,6 @@ const gameMaxTime = 20
 let gameScreenTime = gameMaxTime
 
 let timer = null
-let parentContainer = ''
 
 let defaultSize = 3
 
@@ -33,7 +32,7 @@ function loadingGameGrid(size) {
 
 // game begins
 startGameBtn.addEventListener('click', (e)=> {
-  parentContainer = e.target.parentElement
+  let parentContainer = e.target.parentElement
   parentContainer.removeChild(e.target)
   gameTriggering()
 })
@@ -81,4 +80,8 @@ function timerRunning() {
 function resetNextRoundGame() {
   const controlSection = document.querySelector('#control-section')
   controlSection.appendChild(startGameBtn)
+  randomMole.src = ''
+  let parentContainer = randomMole.parentElement
+  parentContainer.remove(randomMole)
+  gameScreenTime = gameMaxTime
 }
