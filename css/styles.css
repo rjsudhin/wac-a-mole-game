@@ -38,6 +38,17 @@ body {
     height: 300px;
     /* mole moves here */
     display: grid;
+    .board {
+      vertical-align: middle;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .mole {
+        width: 60px;
+        height: 60px;
+      }
+
+    }
   }
 
   .section1, .section3 {
