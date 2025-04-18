@@ -21,7 +21,6 @@ body {
 }
 
 #app-container {
-  border: 1px solid black;
   .section1, .section2, .section3 {
     border: 1px solid black;
     width: 300px;
@@ -36,8 +35,13 @@ body {
 
   .section2#game-grid{
     height: 300px;
+    background-image: url('../icons/dirt.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
     /* mole moves here */
     display: grid;
+    margin: 2rem 0;
     .board {
       vertical-align: middle;
       display: flex;
