@@ -12,7 +12,9 @@ const startGameBtn = document.querySelector('.start-game-btn')
 
 
 // game begins
-startGameBtn.addEventListener('click', ()=> {
+startGameBtn.addEventListener('click', (e)=> {
+  let parentContainer = e.target.parentElement
+  parentContainer.removeChild(e.target)
   gameTriggering()
 })
 
