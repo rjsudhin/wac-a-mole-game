@@ -39,7 +39,7 @@ startGameBtn.addEventListener('click', (e)=> {
 
 function gameTriggering() {
   timer = setInterval(timerRunning, 600)
-  screenRun = setInterval(runningMole, 700)
+  screenRun = setInterval(runningMole, 500)
 
 }
 
@@ -61,6 +61,12 @@ function runningMole() {
   console.log(randomBoard)
 }
 
+// adding user score
+const allBoards = document.querySelectorAll('.board')
+randomMole.addEventListener('mousedown', (e) => {
+  userScore++
+  userScoreDisplay.textContent = userScore
+})
 
 function timerRunning() {
   console.log('time running....')
