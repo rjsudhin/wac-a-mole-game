@@ -41,7 +41,6 @@ function timerRunning() {
 
 
 function resetNextRoundGame() {
-  parentContainer.appendChild(startGameBtn)
-  startGameBtn.textContent = 'Next Round'
-  startGameBtn.classList.add('next-round-btn')
+  const controlSection = document.querySelector('#control-section')
+  controlSection.appendChild(startGameBtn)
 }
