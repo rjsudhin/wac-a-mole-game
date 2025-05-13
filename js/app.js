@@ -57,7 +57,7 @@ function runningMole() {
   randomMole.style.border = 'none'
   randomMole.classList.add('mole')
   // randomMole.alt = 'x'
-  randomMole.src = '../icons/mole.png'
+  randomMole.src = './icons/mole.png'
   console.log(randomBoard)
 }
 
